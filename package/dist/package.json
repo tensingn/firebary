@@ -27,5 +27,8 @@
     "bugs": {
       "url": "https://github.com/tensingn/firebary/issues"
     },
-    "homepage": "https://github.com/tensingn/firebary#readme"
-  }
+    "homepage": "https://github.com/tensingn/firebary#readme",
+    "dependencies": {
+        "@google-cloud/firestore": "^7.5.0"
+    }
+}
