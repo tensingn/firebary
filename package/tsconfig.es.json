@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "ESNext",
+      "declaration": true,
+      "outDir": "dist/cjs",
+      "moduleResolution": "node",
+      "lib": ["ES2020", "DOM"]
+    },
+    "include": ["src/**/*"]
+}

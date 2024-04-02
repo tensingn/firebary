@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext",
+      "target": "ES6",
+      "sourceMap": true,
+      "outDir": "dist/esm",
+      "skipLibCheck": true
+    },
+    "include": ["src/**/*"],
+}

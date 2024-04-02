@@ -1,0 +1,33 @@
+{
+  "name": "firebary",
+  "version": "0.0.1",
+  "description": "library to interact with firestore",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc && tsc --build tsconfig.es.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tensingn/firebary.git"
+  },
+  "keywords": [
+    "firestore"
+  ],
+  "author": "nick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tensingn/firebary/issues"
+  },
+  "homepage": "https://github.com/tensingn/firebary#readme",
+  "devDependencies": {
+    "typescript": "^5.4.3"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^7.5.0"
+  }
+}
