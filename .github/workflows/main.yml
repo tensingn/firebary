@@ -16,7 +16,7 @@ jobs:
           register-url: https://npm.pkg.github.com/
           scope: '@tensingn'
       - run: npm --prefix ./package install
-      - run: npm run build
+      - run: npm --prefix ./package run build
       - run: npm --prefix ./package/dist publish
         env:
           NODE_AUTH_TOKE: ${{secrets.GITHUB_TOKEN}}
