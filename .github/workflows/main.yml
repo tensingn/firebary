@@ -17,6 +17,6 @@ jobs:
           scope: '@tensingn'
       - run: npm --prefix ./package install
       - run: npm --prefix ./package run build
-      - run: npm --prefix ./package/dist publish
+      - run: npm publish ./package/dist/package.json
         env:
           NODE_AUTH_TOKE: ${{secrets.GITHUB_TOKEN}}
