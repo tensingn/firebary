@@ -1,15 +1,13 @@
 {
   "name": "firebary",
   "version": "0.0.1",
-  "description": "library to interact with firestore",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "description": "library to interact with google cloud firestore",
   "files": [
     "dist"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rm -rf dist && tsc && tsc --build tsconfig.cjs.json"
+    "build": "rm -rf dist/esm && rm -rf dist/cjs && tsc && tsc --build tsconfig.cjs.json"
   },
   "repository": {
     "type": "git",

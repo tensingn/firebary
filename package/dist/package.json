@@ -1,0 +1,28 @@
+{
+    "name": "@tensingn/firebary",
+    "version": "0.0.1",
+    "description": "library to interact with google cloud firestore",
+    "main": "cjs/index.js",
+    "module": "esm/index.js",
+    "sideEffects": false,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tensingn/firebary.git"
+      },
+    "files": [
+      "cjs",
+      "esm",
+      "package.json"
+    ],
+    "keywords": [
+      "firestore",
+      "javascript",
+      "typescript"
+    ],
+    "author": "Nick Tensing",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/tensingn/firebary/issues"
+    },
+    "homepage": "https://github.com/tensingn/firebary#readme"
+  }
