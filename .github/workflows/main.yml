@@ -15,10 +15,8 @@ jobs:
           node-version: 16.14.2
           register-url: https://npm.pkg.github.com/
           scope: '@tensingn'
-      - run: cd ./package
-      - run: npm install
+      - run: npm --prefix ./package install
       - run: npm run build
-      - run: cd ./dist
-      - run: npm publish
+      - run: npm --prefix ./package/dist publish
         env:
           NODE_AUTH_TOKE: ${{secrets.GITHUB_TOKEN}}
