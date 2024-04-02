@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-node@v4.0.2
         with:
           node-version: 16.14.2
-          register-url: https://npm.pkg.github.com/
+          registry-url: https://npm.pkg.github.com/
           scope: '@tensingn'
       - run: npm --prefix ./package install
       - run: npm --prefix ./package run build
