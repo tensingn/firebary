@@ -8,7 +8,10 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/tensingn/firebary.git"
-      },
+    },
+    "publishConfig": {
+        "registry":"https://npm.pkg.github.com/@tensingn"
+    },
     "files": [
       "cjs",
       "esm",
