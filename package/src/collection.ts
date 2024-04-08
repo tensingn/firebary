@@ -108,10 +108,11 @@ export class Collection {
 		const writer = this.db.bulkWriter();
 
 		objects.forEach((obj) => {
-			const docRef = obj.id
-				? this.db.collection(this.collectionName).doc(obj.id)
+			const { id, ...saveObj } = obj;
+			const docRef = id
+				? this.db.collection(this.collectionName).doc(id)
 				: this.db.collection(this.collectionName).doc();
-			writer.set(docRef, { ...obj });
+			writer.set(docRef, saveObj);
 		});
 
 		return writer.close();
