@@ -90,6 +90,33 @@ export class Collection {
 		return object;
 	}
 
+	/**
+	 * @since 0.0.3
+	 *
+	 * @param objects objects to write
+	 * @returns a void promise
+	 *
+	 * @description bulk write objects to the collection
+	 *
+	 * NOTE: only 500 objects can be written at once
+	 * NOTE: this is a "fire and forget" method. it does not return objects that were created
+	 */
+	async addMany<T extends DatabaseObject>(objects: Array<T>): Promise<void> {
+		if (objects.length > 500)
+			throw new Error("cannot add more than 500 objects at once");
+
+		const writer = this.db.bulkWriter();
+
+		objects.forEach((obj) => {
+			const docRef = obj.id
+				? this.db.collection(this.collectionName).doc(obj.id)
+				: this.db.collection(this.collectionName).doc();
+			writer.set(docRef, { ...obj });
+		});
+
+		return writer.close();
+	}
+
 	async updateSingle(
 		id: string,
 		partialObject: Object | DatabaseObjectMultiTypeContainer
